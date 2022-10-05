@@ -1,0 +1,86 @@
+name: myplants
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.17.0
+  disk_space: ^0.2.1
+  google_fonts: ^2.1.0
+  file_picker: ^4.5.1
+  file_picker_cross: ^4.6.0
+  flutter_image_compress: ^1.1.1
+  path_provider: ^2.0.1
+  provider: ^6.0.3
+  uuid: ^3.0.4
+  freezed_annotation:
+  json_annotation: ^4.7.0
+  google_sign_in: ^5.4.1
+  flutter_screenutil: ^5.5.3+2
+  # UI KIT Packages
+  flutter_rating_bar: ^4.0.0
+  flutter_colorpicker: ^1.0.3
+  flutter_map: ^0.14.0
+  latlong2: ^0.8.1
+  geolocator: ^8.0.3
+  permission_handler: ^8.3.0
+  cached_network_image: ^3.2.1
+  dio: ^4.0.6
+  carousel_slider: ^4.1.1
+  badges:
+  flutter_custom_clippers:
+  material_design_icons_flutter:
+  blur: ^3.1.0
+  rubber:
+  sliding_up_panel:
+  flutter_svg:
+  image_picker:
+  curved_navigation_bar: ^1.0.3
+  http: ^0.13.4
+  url_launcher: ^6.1.5
+  flutter_launch: ^0.3.0
+  split_view: ^3.2.1
+  geocoding: ^2.0.5
+  geopoint: ^1.0.0
+  calendar_view: ^1.0.0
+
+  # FIREBASE
+  firebase_core: #ignore
+  firebase_auth: #ignore
+  cloud_firestore:
+
+  # STATE MANAGEMENT
+  get:
+  share_plus_web: ^3.0.0
+
+  file_selector_web: ^0.8.1+5
+  package_info_plus_web: ^1.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  flutter_launcher_icons: ^0.10.0
+  freezed:
+  json_serializable: ^6.4.0
+  build_runner: ^2.2.1
+
+flutter_icons:
+  android: 'launcher_icon'
+  ios: true
+  image_path: 'assets/icon/icon.png'
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+    - assets/audio/
+    - assets/document/
+    - assets/font/
+    - assets/image/
+    - assets/video/
+    - assets/data.json

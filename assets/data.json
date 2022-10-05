@@ -1,0 +1,542 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "fullname": "Elearning",
+            "displayname": "Elearning",
+            "shortname": "tnb",
+            "categoryid": 0,
+            "categoryname": "",
+            "sortorder": 1,
+            "summary": "",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [],
+            "showactivitydates": false,
+            "showcompletionconditions": null,
+            "contacts": [],
+            "enrollmentmethods": [],
+            "idnumber": "",
+            "format": "site",
+            "showgrades": 1,
+            "newsitems": 3,
+            "startdate": 0,
+            "enddate": 0,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 0,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "legacyfiles": 0,
+            "calendartype": "",
+            "timecreated": 1662543627,
+            "timemodified": 1663734906,
+            "requested": 0,
+            "cacherev": 1663734906,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "fullname": "Belajar Flutter",
+            "displayname": "Belajar Flutter",
+            "shortname": "Flutter",
+            "categoryid": 2,
+            "categoryname": "Tech",
+            "sortorder": 20002,
+            "summary": "",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [
+                {
+                    "filename": "3.png",
+                    "filepath": "/",
+                    "filesize": 78384,
+                    "fileurl": "http://192.168.100.4/moodle/webservice/pluginfile.php/26/course/overviewfiles/3.png",
+                    "timemodified": 1663725447,
+                    "mimetype": "image/png"
+                }
+            ],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [],
+            "enrollmentmethods": [
+                "manual"
+            ],
+            "idnumber": "",
+            "format": "topics",
+            "showgrades": 1,
+            "newsitems": 5,
+            "startdate": 1663606800,
+            "enddate": 1695142800,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 1,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "legacyfiles": 0,
+            "calendartype": "",
+            "timecreated": 1663557689,
+            "timemodified": 1663725447,
+            "requested": 0,
+            "cacherev": 1663725448,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ],
+            "courseformatoptions": [
+                {
+                    "name": "hiddensections",
+                    "value": 0
+                },
+                {
+                    "name": "coursedisplay",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "fullname": "Belajar Bahasa Inggris",
+            "displayname": "Belajar Bahasa Inggris",
+            "shortname": "B.inggris",
+            "categoryid": 4,
+            "categoryname": "Languange",
+            "sortorder": 30001,
+            "summary": "",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [
+                {
+                    "filename": "1.jpg",
+                    "filepath": "/",
+                    "filesize": 59251,
+                    "fileurl": "http://192.168.100.4/moodle/webservice/pluginfile.php/29/course/overviewfiles/1.jpg",
+                    "timemodified": 1663725523,
+                    "mimetype": "image/jpeg"
+                }
+            ],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [],
+            "enrollmentmethods": [
+                "manual"
+            ],
+            "idnumber": "",
+            "format": "topics",
+            "showgrades": 1,
+            "newsitems": 5,
+            "startdate": 1663606800,
+            "enddate": 1695142800,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 1,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "legacyfiles": 0,
+            "calendartype": "",
+            "timecreated": 1663557871,
+            "timemodified": 1663725523,
+            "requested": 0,
+            "cacherev": 1663725524,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ],
+            "courseformatoptions": [
+                {
+                    "name": "hiddensections",
+                    "value": 0
+                },
+                {
+                    "name": "coursedisplay",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "fullname": "Belajar Memasak Papeda",
+            "displayname": "Belajar Memasak Papeda",
+            "shortname": "Memasak Papeda",
+            "categoryid": 5,
+            "categoryname": "Cooking",
+            "sortorder": 40001,
+            "summary": "",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [
+                {
+                    "filename": "6.jpg",
+                    "filepath": "/",
+                    "filesize": 944473,
+                    "fileurl": "http://192.168.100.4/moodle/webservice/pluginfile.php/31/course/overviewfiles/6.jpg",
+                    "timemodified": 1663725567,
+                    "mimetype": "image/jpeg"
+                }
+            ],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [],
+            "enrollmentmethods": [
+                "manual"
+            ],
+            "idnumber": "",
+            "format": "topics",
+            "showgrades": 1,
+            "newsitems": 5,
+            "startdate": 1663606800,
+            "enddate": 1695142800,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 1,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "legacyfiles": 0,
+            "calendartype": "",
+            "timecreated": 1663557942,
+            "timemodified": 1663725567,
+            "requested": 0,
+            "cacherev": 1663725568,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ],
+            "courseformatoptions": [
+                {
+                    "name": "hiddensections",
+                    "value": 0
+                },
+                {
+                    "name": "coursedisplay",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "fullname": "Elearning TaniBersama",
+            "displayname": "Elearning TaniBersama",
+            "shortname": "tb",
+            "categoryid": 1,
+            "categoryname": "Miscellaneous",
+            "sortorder": 10001,
+            "summary": "",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [
+                {
+                    "filename": "5.jpg",
+                    "filepath": "/",
+                    "filesize": 36706,
+                    "fileurl": "http://192.168.100.4/moodle/webservice/pluginfile.php/36/course/overviewfiles/5.jpg",
+                    "timemodified": 1663734964,
+                    "mimetype": "image/jpeg"
+                }
+            ],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [],
+            "enrollmentmethods": [
+                "manual"
+            ],
+            "idnumber": "1",
+            "format": "topics",
+            "showgrades": 1,
+            "newsitems": 5,
+            "startdate": 1663779600,
+            "enddate": 1695315600,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 1,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "legacyfiles": 0,
+            "calendartype": "",
+            "timecreated": 1663734964,
+            "timemodified": 1663746052,
+            "requested": 0,
+            "cacherev": 1663746053,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ],
+            "courseformatoptions": [
+                {
+                    "name": "hiddensections",
+                    "value": 0
+                },
+                {
+                    "name": "coursedisplay",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "fullname": "Belajar Website",
+            "displayname": "Belajar Website",
+            "shortname": "website",
+            "categoryid": 2,
+            "categoryname": "Tech",
+            "sortorder": 20001,
+            "summary": "",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [
+                {
+                    "filename": "4.jpg",
+                    "filepath": "/",
+                    "filesize": 122651,
+                    "fileurl": "http://192.168.100.4/moodle/webservice/pluginfile.php/38/course/overviewfiles/4.jpg",
+                    "timemodified": 1663774636,
+                    "mimetype": "image/jpeg"
+                }
+            ],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [],
+            "enrollmentmethods": [
+                "manual"
+            ],
+            "idnumber": "6",
+            "format": "topics",
+            "showgrades": 1,
+            "newsitems": 5,
+            "startdate": 1663779600,
+            "enddate": 1695315600,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 1,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "legacyfiles": 0,
+            "calendartype": "",
+            "timecreated": 1663774636,
+            "timemodified": 1663774636,
+            "requested": 0,
+            "cacherev": 1663774643,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ],
+            "courseformatoptions": [
+                {
+                    "name": "hiddensections",
+                    "value": 0
+                },
+                {
+                    "name": "coursedisplay",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "warnings": []
+}

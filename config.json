@@ -1,0 +1,11 @@
+{
+    "state_management": "getx",
+    "modules": [
+        "Profil",
+        "Dashboard",
+        "Navigation",
+        "Login",
+        "Welcome",
+        "ProductDetail"
+    ]
+}
