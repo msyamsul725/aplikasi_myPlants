@@ -25,7 +25,7 @@ class LoginAbsenController extends GetxController {
         password: passwordID.text,
       );
       //----->
-      Get.offAll(const NavigationView());
+      Get.offAll(const BasicMainNavigationView());
     } on Exception catch (_) {
       Get.snackbar("Gagal", "Periksa Email & Password Kembali");
     }
@@ -49,7 +49,7 @@ class LoginAbsenController extends GetxController {
           accessToken: googleAuth?.accessToken,
           idToken: googleAuth?.idToken,
         );
-        Get.offAll(const NavigationView());
+        Get.offAll(const BasicMainNavigationView());
         await auth.signInWithCredential(crendentials);
         getSuccessSnackBar("Successfully logged in as ${_user.value!.email}");
       }

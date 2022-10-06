@@ -6,6 +6,8 @@
         "Navigation",
         "Login",
         "Welcome",
-        "ProductDetail"
+        "ProductDetail",
+        "Plant List",
+        "Plant Form"
     ]
 }

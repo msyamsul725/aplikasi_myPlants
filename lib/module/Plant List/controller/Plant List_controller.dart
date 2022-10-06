@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../view/Navigation_view.dart';
+import '../view/Plant List_view.dart';
 
-class NavigationController extends GetxController {
-  BasicMainNavigationView? view;
+class PlantListController extends GetxController {
+  PlantListView? view;
 
   @override
   void onInit() {
