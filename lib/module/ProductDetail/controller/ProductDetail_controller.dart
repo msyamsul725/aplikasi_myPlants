@@ -18,4 +18,12 @@ class ProductDetailController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  int qty = 1;
+
+  addToCart() async {
+    var myplants = view!.item.copyWith(
+      qty: qty,
+    );
+  }
 }

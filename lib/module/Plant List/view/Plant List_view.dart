@@ -40,7 +40,7 @@ class PlantListView extends StatelessWidget {
                   //body
                   StreamBuilder<QuerySnapshot>(
                     stream: FirebaseFirestore.instance
-                        .collection("myplants")
+                        .collection("myplantNew")
                         .snapshots(),
                     builder: (context, snapshot) {
                       if (snapshot.hasError) return const Text("Error");
@@ -50,7 +50,7 @@ class PlantListView extends StatelessWidget {
                       }
                       final data = snapshot.data!;
                       return SizedBox(
-                        height: 100.0,
+                        height: 400.0,
                         child: ListView.builder(
                           itemCount: data.docs.length,
                           itemBuilder: (context, index) {

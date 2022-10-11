@@ -21,7 +21,7 @@ class _BasicMainNavigationViewState extends State<BasicMainNavigationView> {
         body: IndexedStack(
           index: selectedIndex,
           children: [
-            const DashboardView(),
+            DashboardView(),
             Container(
               color: Colors.red[100],
             ),

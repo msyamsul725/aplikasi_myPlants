@@ -1,42 +1,31 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import '../../../shared/util/input/input.dart';
+import 'package:myplants/models/myplants/myplants.dart';
+import 'package:myplants/service/myplant_service.dart';
+import 'package:myplants/shared/util/input.dart';
+
 import '../view/Plant Form_view.dart';
 
 class PlantFormController extends GetxController {
-  PlantFormView? view;
+  static late PlantFormController instance;
+  late PlantFormView? view;
 
   @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
+  void dispose() => super.dispose();
   doSave() async {
     var plant_name = Input.get("plant_name");
     var photo = Input.get("photo");
     var price = Input.get("price");
-    var rating = Input.get("rating");
+    //var rating = Input.get("rating");
     var description = Input.get("description");
 
-    await FirebaseFirestore.instance.collection("myplants").add({
-      "plant_name": plant_name,
-      "price": price,
-      "photo": photo,
-      "rating": rating,
-      "description": description,
-      "created_at": Timestamp.now(),
-    });
-
+    MyplantsService.addProduct(Myplants(
+      plantName: plant_name,
+      photo: photo,
+      price: double.parse(price),
+      //rating: rating,
+      description: description,
+    ));
     Get.back();
   }
 }

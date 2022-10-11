@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:myplants/core.dart';
+
+import 'package:myplants/models/myplants/myplants.dart';
 import '../controller/Dashboard_controller.dart';
 
 import 'package:get/get.dart';
@@ -103,178 +105,189 @@ class DashboardView extends StatelessWidget {
                         return const Text("No Data");
                       }
                       final data = snapshot.data!;
-                      return Container(
+                      return SizedBox(
                         width: 360.0,
                         height: 360.0,
                         child: ListView.builder(
-                          itemCount: data.docs.length,
+                          itemCount: snapshot.data!.docs.length,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
-                            Map<String, dynamic> item = (data.docs[index].data()
-                                as Map<String, dynamic>);
-                            item["id"] = data.docs[index].id;
-                            return Container(
-                              width: 360.0,
-                              height: 360.0,
-                              decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(
-                                    16.0,
+                            Map<String, dynamic> item =
+                                (snapshot.data!.docs[index].data()
+                                    as Map<String, dynamic>);
+                            item["id"] = snapshot.data!.docs[index].id;
+                            var myplants = Myplants.fromJson(item);
+
+                            return InkWell(
+                              onTap: () =>
+                                  Get.to(ProductDetailView(item: myplants)),
+                              child: Container(
+                                width: 360.0,
+                                height: 360.0,
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      16.0,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              child: Stack(
-                                children: [
-                                  Center(
-                                    child: Container(
-                                      margin: const EdgeInsets.only(
-                                        left: 80.0,
-                                      ),
-                                      width: 280.0,
-                                      height: 280.0,
-                                      // ignore: prefer_const_constructors
-                                      decoration: BoxDecoration(
-                                        boxShadow: const [],
-                                        color: const Color(0xff54805A),
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(
-                                            24.0,
+                                child: Stack(
+                                  children: [
+                                    Center(
+                                      child: Container(
+                                        margin: const EdgeInsets.only(
+                                          left: 80.0,
+                                        ),
+                                        width: 280.0,
+                                        height: 280.0,
+                                        // ignore: prefer_const_constructors
+                                        decoration: BoxDecoration(
+                                          boxShadow: const [],
+                                          color: const Color(0xff54805A),
+                                          borderRadius: const BorderRadius.all(
+                                            Radius.circular(
+                                              24.0,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      child: Stack(
-                                        // ignore: prefer_const_literals_to_create_immutables
-                                        children: [
-                                          Column(
-                                            children: [
-                                              const SizedBox(
-                                                height: 40.0,
-                                              ),
-                                              Container(
-                                                margin: const EdgeInsets.only(
-                                                  left: 110.0,
+                                        child: Stack(
+                                          // ignore: prefer_const_literals_to_create_immutables
+                                          children: [
+                                            Column(
+                                              children: [
+                                                const SizedBox(
+                                                  height: 40.0,
                                                 ),
-                                                width: 120.0,
-                                                height: 180.0,
-                                                decoration: const BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                    Radius.circular(
-                                                      16.0,
+                                                Container(
+                                                  margin: const EdgeInsets.only(
+                                                    left: 110.0,
+                                                  ),
+                                                  width: 120.0,
+                                                  height: 180.0,
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                      Radius.circular(
+                                                        16.0,
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
-                                                child: Column(
-                                                  children: [
-                                                    const SizedBox(
-                                                      height: 20.0,
-                                                    ),
-                                                    Container(
-                                                      height: 60.0,
-                                                      width: 120.0,
-                                                      child: Text(
-                                                        item["plant_name"],
-                                                        // ignore: prefer_const_constructors
-                                                        style: TextStyle(
-                                                          fontSize: 24.0,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                                  child: Column(
+                                                    children: [
+                                                      const SizedBox(
+                                                        height: 20.0,
                                                       ),
-                                                    ),
-                                                    const SizedBox(
-                                                      height: 20.0,
-                                                    ),
-                                                    Container(
-                                                      width: 260.0,
-                                                      margin:
-                                                          const EdgeInsets.only(
-                                                        right: 30.0,
-                                                      ),
-                                                      child: Text(
-                                                        "\$ ${item["price"]}.00  ",
-                                                        textAlign:
-                                                            TextAlign.right,
-                                                        style: TextStyle(
-                                                          fontSize: 24,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color: Colors.white,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    Container(
-                                                      margin:
-                                                          const EdgeInsets.only(
-                                                        right: 66.0,
-                                                      ),
-                                                      width: 60.0,
-                                                      height: 40.0,
-                                                      child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          const Icon(
-                                                            Icons.star,
-                                                            size: 24.0,
-                                                            color:
-                                                                Colors.orange,
+                                                      SizedBox(
+                                                        height: 60.0,
+                                                        width: 120.0,
+                                                        child: Text(
+                                                          myplants.plantName ??
+                                                              "_",
+                                                          // ignore: prefer_const_constructors
+                                                          style: TextStyle(
+                                                            fontSize: 24.0,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight.bold,
                                                           ),
-                                                          Text(
-                                                            "${item["rating"]}",
-                                                            style: TextStyle(
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 20.0,
+                                                      ),
+                                                      Container(
+                                                        width: 260.0,
+                                                        margin: const EdgeInsets
+                                                            .only(
+                                                          right: 30.0,
+                                                        ),
+                                                        child: Text(
+                                                          "\$ ${myplants.price}",
+                                                          textAlign:
+                                                              TextAlign.right,
+                                                          style: TextStyle(
+                                                            fontSize: 24,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        margin: const EdgeInsets
+                                                            .only(
+                                                          right: 66.0,
+                                                        ),
+                                                        width: 60.0,
+                                                        height: 40.0,
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            Icon(
+                                                              Icons.star,
+                                                              size: 24.0,
                                                               color:
-                                                                  Colors.white,
+                                                                  Colors.orange,
                                                             ),
-                                                          ),
-                                                        ],
+                                                            Text(
+                                                              "${myplants.rating}",
+                                                              style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                color: Colors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Container(
-                                                margin: const EdgeInsets.only(
-                                                  left: 220.0,
-                                                ),
-                                                child: IconButton(
-                                                  onPressed: () {},
-                                                  icon: const Icon(
-                                                    Icons.add_box,
-                                                    size: 32.0,
-                                                    color: Colors.white,
+                                                    ],
                                                   ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 220,
-                                    height: 280.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: const BorderRadius.all(
-                                        Radius.circular(
-                                          16.0,
+                                                Container(
+                                                  margin: const EdgeInsets.only(
+                                                    left: 220.0,
+                                                  ),
+                                                  child: IconButton(
+                                                    onPressed: () {},
+                                                    icon: const Icon(
+                                                      Icons.add_box,
+                                                      size: 32.0,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
-                                    child: Image.network(
-                                      item["photo"],
-                                      width: 64.0,
-                                      height: 64.0,
-                                      fit: BoxFit.fill,
+                                    Container(
+                                      width: 220,
+                                      height: 280.0,
+                                      decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(
+                                            16.0,
+                                          ),
+                                        ),
+                                      ),
+                                      child: Image.network(
+                                        myplants.photo ??
+                                            "https://i.ibb.co/S32HNjD/no-image.jpg"
+                                                .toString(),
+                                        width: 64.0,
+                                        height: 64.0,
+                                        fit: BoxFit.fill,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             );
                           },
@@ -284,7 +297,7 @@ class DashboardView extends StatelessWidget {
                   ),
                   StreamBuilder<QuerySnapshot>(
                     stream: FirebaseFirestore.instance
-                        .collection("myplants")
+                        .collection("myplantNew")
                         .snapshots(),
                     builder: (context, snapshot) {
                       if (snapshot.hasError) return const Text("Error");
@@ -306,8 +319,8 @@ class DashboardView extends StatelessWidget {
                             return Container(
                               width: 160.0,
                               height: 220.0,
-                              decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(
                                   Radius.circular(
                                     16.0,
                                   ),
@@ -342,7 +355,7 @@ class DashboardView extends StatelessWidget {
                                       ),
                                       child: Text(
                                         item["plant_name"],
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -354,8 +367,8 @@ class DashboardView extends StatelessWidget {
                                     ),
                                     width: 130.0,
                                     height: 150.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: const BorderRadius.all(
+                                    decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(
                                         Radius.circular(
                                           16.0,
                                         ),
