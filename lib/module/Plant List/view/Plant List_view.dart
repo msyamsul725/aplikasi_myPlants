@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:myplants/core.dart';
 import '../controller/Plant List_controller.dart';
-
-import 'package:get/get.dart';
 
 class PlantListView extends StatelessWidget {
   const PlantListView({Key? key}) : super(key: key);

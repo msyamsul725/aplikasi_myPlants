@@ -8,6 +8,8 @@
         "Welcome",
         "ProductDetail",
         "Plant List",
-        "Plant Form"
+        "Plant Form",
+        "Cart List",
+        "CheckOut"
     ]
 }

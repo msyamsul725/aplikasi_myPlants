@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:myplants/core.dart';
 
 import 'package:myplants/models/myplants/myplants.dart';
 import '../controller/Dashboard_controller.dart';
-
-import 'package:get/get.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -256,7 +257,7 @@ class DashboardView extends StatelessWidget {
                                                     onPressed: () {},
                                                     icon: const Icon(
                                                       Icons.add_box,
-                                                      size: 32.0,
+                                                      size: 36.0,
                                                       color: Colors.white,
                                                     ),
                                                   ),
@@ -297,7 +298,7 @@ class DashboardView extends StatelessWidget {
                   ),
                   StreamBuilder<QuerySnapshot>(
                     stream: FirebaseFirestore.instance
-                        .collection("myplantNew")
+                        .collection("myplants")
                         .snapshots(),
                     builder: (context, snapshot) {
                       if (snapshot.hasError) return const Text("Error");
@@ -307,8 +308,7 @@ class DashboardView extends StatelessWidget {
                       }
                       final data = snapshot.data!;
                       return SizedBox(
-                        width: 360.0,
-                        height: 220.0,
+                        height: 260.0,
                         child: ListView.builder(
                           itemCount: data.docs.length,
                           scrollDirection: Axis.horizontal,
@@ -317,10 +317,13 @@ class DashboardView extends StatelessWidget {
                                 as Map<String, dynamic>);
                             item["id"] = data.docs[index].id;
                             return Container(
+                              margin: const EdgeInsets.only(
+                                right: 20.0,
+                              ),
                               width: 160.0,
                               height: 220.0,
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.all(
                                   Radius.circular(
                                     16.0,
                                   ),
@@ -328,47 +331,107 @@ class DashboardView extends StatelessWidget {
                               ),
                               child: Stack(
                                 children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(
-                                      top: 120.0,
-                                    ),
-                                    height: 140,
-                                    width: 140.0,
-                                    decoration: BoxDecoration(
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          color:
-                                              Color.fromARGB(255, 41, 177, 59),
-                                          blurRadius: 100,
-                                          offset: Offset(0, 32),
-                                        ),
-                                      ],
-                                      color: Colors.blueGrey[200],
-                                      borderRadius: const BorderRadius.all(
-                                        Radius.circular(24.0),
+                                  Column(
+                                    children: [
+                                      const SizedBox(
+                                        height: 80.0,
                                       ),
-                                    ),
-                                    child: Container(
-                                      margin: const EdgeInsets.only(
-                                        top: 60.0,
-                                        left: 20.0,
-                                      ),
-                                      child: Text(
-                                        item["plant_name"],
-                                        style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                      Container(
+                                        height: 80.0,
+                                        decoration: const BoxDecoration(
+                                          color: Color(0xff54805A),
+                                          borderRadius: const BorderRadius.only(
+                                            topLeft: Radius.circular(12.0),
+                                            topRight: Radius.circular(12.0),
+                                          ),
                                         ),
                                       ),
-                                    ),
+                                      Container(
+                                        height: 60.0,
+                                        decoration: const BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: const BorderRadius.only(
+                                            bottomLeft: Radius.circular(12.0),
+                                            bottomRight: Radius.circular(12.0),
+                                          ),
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            const SizedBox(
+                                              height: 10.0,
+                                            ),
+                                            Container(
+                                              height: 20.0,
+                                              child: Text(
+                                                item["plant_name"],
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ),
+                                            Container(
+                                              height: 20.0,
+                                              child: SizedBox(
+                                                height: 100.0,
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    Container(
+                                                        width: 60.0,
+                                                        child: Text(
+                                                          "\$ ${item["price"]}.0",
+                                                          style: TextStyle(
+                                                            fontSize: 14,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                        )),
+                                                    Container(
+                                                      width: 60.0,
+                                                      child: SizedBox(
+                                                        height: 100.0,
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceAround,
+                                                          children: [
+                                                            Icon(
+                                                              Icons.star,
+                                                              size: 16.0,
+                                                              color:
+                                                                  Colors.orange,
+                                                            ),
+                                                            Text(
+                                                              "${item["rating"]}",
+                                                              style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                color: Colors
+                                                                    .black,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(
-                                      left: 10.0,
-                                    ),
-                                    width: 130.0,
-                                    height: 150.0,
-                                    decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.all(
+                                    width: 140,
+                                    height: 140.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: const BorderRadius.all(
                                         Radius.circular(
                                           16.0,
                                         ),
@@ -379,6 +442,21 @@ class DashboardView extends StatelessWidget {
                                       width: 64.0,
                                       height: 64.0,
                                       fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(
+                                      top: 80.0,
+                                      left: 120.0,
+                                    ),
+                                    child: IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                        Icons.heart_broken,
+                                        size: 28.0,
+                                        color:
+                                            Color.fromARGB(255, 237, 146, 140),
+                                      ),
                                     ),
                                   ),
                                 ],

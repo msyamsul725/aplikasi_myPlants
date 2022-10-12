@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myplants/core.dart';
-import '../controller/Welcome_controller.dart';
-
 import 'package:get/get.dart';
+
+import 'package:myplants/core.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -84,7 +83,8 @@ class WelcomeView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
-                        onPressed: () => Get.to(BasicMainNavigationView()),
+                        onPressed: () =>
+                            Get.to(const BasicMainNavigationView()),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           // ignore: prefer_const_literals_to_create_immutables

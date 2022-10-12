@@ -46,60 +46,60 @@ class PlantFormView extends StatelessWidget {
               child: Column(
                 children: [
                   // //body
-                  // ExTextField(
-                  //   id: "plant_name",
-                  //   label: "Plant Name",
-                  //   value: myplants != null ? myplants!.plantName : null,
-                  // ),
-                  // ExImagePicker(
-                  //   id: "photo",
-                  //   label: "Photo",
-                  //   onChanged: (value) {},
-                  //   value: myplants != null ? myplants!.photo : null,
-                  // ),
-                  // ExTextField(
-                  //   id: "price",
-                  //   label: "Price",
-                  //   onChanged: (value) {},
-                  //   keyboardType: const TextInputType.numberWithOptions(),
-                  //   value: myplants != null ? myplants!.price.toString() : null,
-                  // ),
-                  // const ExRating(
-                  //   id: "rating",
-                  //   label: "Rating",
-                  // ),
-                  // ExTextArea(
-                  //   id: "description",
-                  //   label: "Description",
-                  //   value: myplants != null ? myplants!.description : null,
-                  // )
-                  QImagePicker(
+                  ExTextField(
+                    id: "plant_name",
+                    label: "Plant Name",
+                    value: myplants != null ? myplants!.plantName : null,
+                  ),
+                  ExImagePicker(
                     id: "photo",
                     label: "Photo",
                     onChanged: (value) {},
                     value: myplants != null ? myplants!.photo : null,
                   ),
-                  QTextField(
-                    id: "plant_name",
-                    label: "myplants Name",
-                    helperText: "Your myplants name",
-                    onChanged: (value) {},
-                    value: myplants != null ? myplants!.plantName : null,
-                  ),
-                  QNumberField(
+                  ExTextField(
                     id: "price",
                     label: "Price",
-                    helperText: "Your myplants price",
                     onChanged: (value) {},
+                    keyboardType: const TextInputType.numberWithOptions(),
                     value: myplants != null ? myplants!.price.toString() : null,
                   ),
-                  QTextArea(
+                  const ExRating(
+                    id: "rating",
+                    label: "Rating",
+                  ),
+                  ExTextArea(
                     id: "description",
                     label: "Description",
-                    helperText: "Your myplants description",
-                    onChanged: (value) {},
                     value: myplants != null ? myplants!.description : null,
-                  ),
+                  )
+                  // QImagePicker(
+                  //   id: "photo",
+                  //   label: "Photo",
+                  //   onChanged: (value) {},
+                  //   value: myplants != null ? myplants!.photo : null,
+                  // ),
+                  // QTextField(
+                  //   id: "plant_name",
+                  //   label: "myplants Name",
+                  //   helperText: "Your myplants name",
+                  //   onChanged: (value) {},
+                  //   value: myplants != null ? myplants!.plantName : null,
+                  // ),
+                  // QNumberField(
+                  //   id: "price",
+                  //   label: "Price",
+                  //   helperText: "Your myplants price",
+                  //   onChanged: (value) {},
+                  //   value: myplants != null ? myplants!.price.toString() : null,
+                  // ),
+                  // QTextArea(
+                  //   id: "description",
+                  //   label: "Description",
+                  //   helperText: "Your myplants description",
+                  //   onChanged: (value) {},
+                  //   value: myplants != null ? myplants!.description : null,
+                  // ),
                 ],
               ),
             ),

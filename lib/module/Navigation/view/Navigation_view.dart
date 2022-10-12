@@ -22,9 +22,7 @@ class _BasicMainNavigationViewState extends State<BasicMainNavigationView> {
           index: selectedIndex,
           children: [
             DashboardView(),
-            Container(
-              color: Colors.red[100],
-            ),
+            CartListView(),
             Container(
               color: Colors.purple[100],
             ),
@@ -84,7 +82,7 @@ class _BasicMainNavigationViewState extends State<BasicMainNavigationView> {
                   Expanded(
                     child: IconButton(
                       icon: Icon(
-                        Icons.list,
+                        Icons.shopping_cart,
                         color: selectedIndex == 1
                             ? Color(0xffEBDD4F)
                             : Colors.white,

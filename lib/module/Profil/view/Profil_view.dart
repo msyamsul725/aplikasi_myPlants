@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:myplants/core.dart';
 import '../controller/Profil_controller.dart';
-
-import 'package:get/get.dart';
 
 class ProfilView extends StatelessWidget {
   const ProfilView({Key? key}) : super(key: key);

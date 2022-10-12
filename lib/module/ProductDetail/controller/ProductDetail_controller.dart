@@ -1,4 +1,7 @@
 import 'package:get/get.dart';
+import 'package:myplants/core.dart';
+import 'package:myplants/service/myplant_service.dart';
+
 import '../view/ProductDetail_view.dart';
 
 class ProductDetailController extends GetxController {
@@ -21,9 +24,23 @@ class ProductDetailController extends GetxController {
 
   int qty = 1;
 
+  addQty() {
+    qty++;
+    update();
+  }
+
+  decQty() {
+    if (qty == 1) return;
+    qty--;
+    update();
+  }
+
   addToCart() async {
     var myplants = view!.item.copyWith(
       qty: qty,
     );
+
+    CartService.addItem(myplants);
+    Get.back();
   }
 }
