@@ -1,16 +1,47 @@
-# myplants
 
-A new Flutter project.
 
-## Getting Started
+## Tentang Aplikasi Myplants
+---
+sebuah aplikasi  penjulan tanaman pekarangan rumah dengan menggunakan fitur kebanyakan Ecommerce yang sering di pakai.
 
-This project is a starting point for a Flutter application.
+## Fitur Myplants
 
-A few resources to get you started if this is your first Flutter project:
+- Login 
+- Dasboard
+- Plants Detail
+- Cart
+- Form plants
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Pengembang 
+---
+
+| Nama | Email    | Social Media  | Sebagai  |
+| :---   | :--- | :--- | :--- |
+
+| Syamsul Ma'arif | msyamsul725@gmail.com | [Instagram](https://www.instagram.com/msyamsul725/) . [Linkedin](https://www.linkedin.com/in/syamsul-maarif-a7475422a/) . [GitHub](https://github.com/Msyamsul7251) | Hacker
+
+<br/>
+
+
+
+---
+### How to Run
+- Jalankan perintah ini
+```
+flutter pub get --verbose
+```
+
+- Tekan F5 di VsCode
+<br/>
+
+
+### Screenshot
+![alt text](https://github.com/msyamsul725/aplikasi-absen/blob/main/assets/image/sc_fitur.jpg)
+
+<br/>
+
+
+
+
+
